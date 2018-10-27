@@ -49,7 +49,7 @@ void CirculoG::mostrar(Graphics^gr)
 	System::Drawing::Rectangle porcion = System::Drawing::Rectangle(indiceW*W, indiceH*H, W, H);
 	System::Drawing::Rectangle zoom = System::Drawing::Rectangle(x, y, W/4, H/4);
 	gr->DrawImage(bmp, zoom, porcion, System::Drawing::GraphicsUnit::Pixel);
-
+	delete bmp;
 }
 void CirculoG::Mover(Graphics^gr)
 {

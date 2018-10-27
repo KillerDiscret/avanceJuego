@@ -94,7 +94,7 @@ namespace Project21 {
 		//agregar un obj circulo Grande
 		if (contador==50)
 		{
-			if (veces<3)
+			if (veces<=3)
 			{
 				CirculoG* obj2 = new CirculoG();
 				obj2->cambiar_x(d->VisibleClipBounds.Width / (2.5));
@@ -113,6 +113,9 @@ namespace Project21 {
 
 
 		bg->Render(gr);
+		delete gr;
+		delete bc;
+		delete bg;
 	}
 	};
 }
