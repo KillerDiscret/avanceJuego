@@ -268,6 +268,9 @@ namespace Project21 {
 			}
 				arreglocp->set_N(0);
 				aux1 = false;
+				CG = true;
+				CM = true;
+				CP = true;
 		}
 //NIVEL 1************************************************************************************************
 		if (nivel==1)
@@ -408,6 +411,9 @@ namespace Project21 {
 			}
 			arreglocp->set_N(0);
 			aux2 = false;
+			CG = true;
+			CM = true;
+			CP = true;
 		}
 //NIVEL 2************************************************************************************************
 		if (nivel == 2)
@@ -547,6 +553,9 @@ namespace Project21 {
 			}
 			arreglocp->set_N(0);
 			aux3 = false;
+			CG = true;
+			CM = true;
+			CP = true;
 		}
 //NIVEL 3************************************************************************************************
 		if (nivel == 3)
@@ -686,6 +695,9 @@ namespace Project21 {
 			}
 			arreglocp->set_N(0);
 			aux4 = false;
+			CG = true;
+			CM = true;
+			CP = true;
 		}
 
 //NIVEL 4************************************************************************************************
@@ -905,6 +917,153 @@ private: System::Void MyForm_KeyDown(System::Object^  sender, System::Windows::F
 {
 	switch (e->KeyCode)
 	{
+	case Keys::G:
+	{
+		if (nivel==0)
+		{
+			for (int i = 0; i<arreglocg->get_N(); i++)
+			{
+				delete arreglocg->obtener(i);
+			}
+			arreglocg->set_N(0);
+			CG = false;
+		}
+		if (nivel == 1)
+		{
+			for (int i = 0; i<arreglocg->get_N(); i++)
+			{
+				delete arreglocg->obtener(i);
+			}
+			arreglocg->set_N(0);
+			CG = false;
+		}
+		if (nivel == 2)
+		{
+			for (int i = 0; i<arreglocg->get_N(); i++)
+			{
+				delete arreglocg->obtener(i);
+			}
+			arreglocg->set_N(0);
+			CG = false;
+		}
+		if (nivel == 3)
+		{
+			for (int i = 0; i<arreglocg->get_N(); i++)
+			{
+				delete arreglocg->obtener(i);
+			}
+			arreglocg->set_N(0);
+			CG = false;
+		}
+		if (nivel == 4)
+		{
+			for (int i = 0; i<arreglocg->get_N(); i++)
+			{
+				delete arreglocg->obtener(i);
+			}
+			arreglocg->set_N(0);
+			CG = false;
+		}
+		break;
+	}
+	case Keys::P:
+	{
+		if (nivel == 0)
+		{
+			for (int i = 0; i<arreglocp->get_N(); i++)
+			{
+				delete arreglocp->obtener(i);
+			}
+			arreglocp->set_N(0);
+			CP = false;
+		}
+		if (nivel == 1)
+		{
+			for (int i = 0; i<arreglocp->get_N(); i++)
+			{
+				delete arreglocp->obtener(i);
+			}
+			arreglocp->set_N(0);
+			CP = false;
+		}
+		if (nivel == 2)
+		{
+			for (int i = 0; i<arreglocp->get_N(); i++)
+			{
+				delete arreglocp->obtener(i);
+			}
+			arreglocp->set_N(0);
+			CP = false;
+		}
+		if (nivel == 3)
+		{
+			for (int i = 0; i<arreglocp->get_N(); i++)
+			{
+				delete arreglocp->obtener(i);
+			}
+			arreglocp->set_N(0);
+			CP = false;
+		}
+		if (nivel == 4)
+		{
+			for (int i = 0; i<arreglocp->get_N(); i++)
+			{
+				delete arreglocp->obtener(i);
+			}
+			arreglocp->set_N(0);
+			CP = false;
+		}
+		break;
+	}
+	case Keys::M:
+	{
+		if (nivel == 0)
+		{
+			for (int i = 0; i<arreglocm->get_N(); i++)
+			{
+				delete arreglocm->obtener(i);
+			}
+			arreglocm->set_N(0);
+			CM = false;
+		}
+		if (nivel == 1)
+		{
+			for (int i = 0; i<arreglocm->get_N(); i++)
+			{
+				delete arreglocm->obtener(i);
+			}
+			arreglocm->set_N(0);
+			CM = false;
+		}
+		if (nivel == 2)
+		{
+			for (int i = 0; i<arreglocm->get_N(); i++)
+			{
+				delete arreglocm->obtener(i);
+			}
+			arreglocm->set_N(0);
+			CM = false;
+		}
+		if (nivel == 3)
+		{
+			for (int i = 0; i<arreglocm->get_N(); i++)
+			{
+				delete arreglocm->obtener(i);
+			}
+			arreglocm->set_N(0);
+			CM = false;
+		}
+		if (nivel == 4)
+		{
+			for (int i = 0; i<arreglocm->get_N(); i++)
+			{
+				delete arreglocm->obtener(i);
+			}
+			arreglocm->set_N(0);
+			CM = false;
+		}
+		break;
+	}
 	case Keys::Up://arriba
 		objjugador->setdireccion(arriba);
 		break;
