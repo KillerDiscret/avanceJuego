@@ -10,6 +10,7 @@ public:
 	void agregar(CirculoP*obj);
 	CirculoP* obtener(int indice);
 	int get_N();
+	void set_N(int valor);
 	~Arrcp();
 };
 Arrcp::Arrcp()
@@ -40,6 +41,10 @@ CirculoP* Arrcp::obtener(int indice)
 int Arrcp::get_N()
 {
 	return *N;
+}
+void Arrcp::set_N(int valor)
+{
+	*N = valor;
 }
 Arrcp::~Arrcp()
 {

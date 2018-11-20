@@ -5,8 +5,8 @@ using namespace System;
 class padre
 {
 protected:
-	int x, y;
-	int dx, dy;
+	double x, y;
+	double dx, dy;
 	char *imagen;
 	int W, H;
 	int indiceW;
@@ -14,15 +14,15 @@ protected:
 public:
 	padre(void);
 	~padre(void);
-	void cambiar_x(int nuevo);
-	void cambiar_y(int nuevo);
-	void cambiar_dx(int nuevo);
-	void cambiar_dy(int nuevo);
-	void cambiar_dx_dy(int DX, int DY);
-	int retornar_x();
-	int retornar_y();
-	int retornar_dx();
-	int retornar_dy();
+	void cambiar_x(double nuevo);
+	void cambiar_y(double nuevo);
+	void cambiar_dx(double nuevo);
+	void cambiar_dy(double nuevo);
+	void cambiar_dx_dy(double DX, double DY);
+	double retornar_x();
+	double retornar_y();
+	double retornar_dx();
+	double retornar_dy();
 	int retornar_H();
 	int retornar_W();
 
@@ -36,23 +36,23 @@ padre::padre()
 	indiceH = indiceW = 0;
 	imagen = new char[100];
 }
-void padre::cambiar_x(int nuevo)
+void padre::cambiar_x(double nuevo)
 {
 	x = nuevo;
 }
-void padre::cambiar_y(int nuevo)
+void padre::cambiar_y(double nuevo)
 {
 	y = nuevo;
 }
-void padre::cambiar_dx(int nuevo)
+void padre::cambiar_dx(double nuevo)
 {
 	dx = nuevo;
 }
-void padre::cambiar_dy(int nuevo)
+void padre::cambiar_dy(double nuevo)
 {
 	dy = nuevo;
 }
-void padre::cambiar_dx_dy(int DX, int DY)
+void padre::cambiar_dx_dy(double DX, double DY)
 {
 	//cuando mandamos parámetros tienen que ser positivos
 	if (dx<0)
@@ -73,19 +73,19 @@ void padre::cambiar_dx_dy(int DX, int DY)
 	}
 
 }
-int  padre::retornar_x()
+double  padre::retornar_x()
 {
 	return x;
 }
-int  padre::retornar_y()
+double  padre::retornar_y()
 {
 	return y;
 }
-int  padre::retornar_dx()
+double  padre::retornar_dx()
 {
 	return dx;
 }
-int  padre::retornar_dy()
+double  padre::retornar_dy()
 {
 	return dy;
 }

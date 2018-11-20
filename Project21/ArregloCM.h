@@ -10,6 +10,7 @@ public:
 	void agregar(CirculoM*obj);
 	CirculoM* obtener(int indice);
 	int get_N();
+	void set_N(int valor);
 	~Arrcm();
 };
 Arrcm::Arrcm()
@@ -40,6 +41,10 @@ CirculoM* Arrcm::obtener(int indice)
 int Arrcm::get_N()
 {
 	return *N;
+}
+void Arrcm::set_N(int valor)
+{
+	*N = valor;
 }
 Arrcm::~Arrcm()
 {
