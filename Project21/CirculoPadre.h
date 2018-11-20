@@ -18,12 +18,14 @@ public:
 	void cambiar_y(int nuevo);
 	void cambiar_dx(int nuevo);
 	void cambiar_dy(int nuevo);
+	void cambiar_dx_dy(int DX, int DY);
 	int retornar_x();
 	int retornar_y();
 	int retornar_dx();
 	int retornar_dy();
 	int retornar_H();
 	int retornar_W();
+
 
 };
 padre::padre()
@@ -49,6 +51,27 @@ void padre::cambiar_dx(int nuevo)
 void padre::cambiar_dy(int nuevo)
 {
 	dy = nuevo;
+}
+void padre::cambiar_dx_dy(int DX, int DY)
+{
+	//cuando mandamos parámetros tienen que ser positivos
+	if (dx<0)
+	{
+		dx = DX*-1;
+	}
+	if (dx>0)
+	{
+		dx = DX;
+	}
+	if (dy<0)
+	{
+		dy = DY*-1;
+	}
+	if (dy>0)
+	{
+		dy = DY;
+	}
+
 }
 int  padre::retornar_x()
 {

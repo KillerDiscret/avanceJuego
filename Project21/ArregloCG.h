@@ -10,6 +10,7 @@ public:
 	void agregar(CirculoG*obj);
 	CirculoG* obtener(int indice);
 	int get_N();
+	void set_N(int valor);
 	~Arrcg();
 };
 Arrcg::Arrcg()
@@ -40,6 +41,10 @@ CirculoG* Arrcg::obtener(int indice)
 int Arrcg::get_N()
 {
 	return *N;
+}
+void Arrcg::set_N(int valor)
+{
+	*N = valor;
 }
 Arrcg::~Arrcg()
 {

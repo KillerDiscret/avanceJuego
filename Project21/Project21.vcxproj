@@ -104,6 +104,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -136,8 +138,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArregloCG.h" />
+    <ClInclude Include="ArregloCM.h" />
+    <ClInclude Include="ArregloCP.h" />
     <ClInclude Include="CirculoGrande.h" />
+    <ClInclude Include="CirculoMediano.h" />
     <ClInclude Include="CirculoPadre.h" />
+    <ClInclude Include="CirculoPequeño.h" />
+    <ClInclude Include="Mapa.h" />
+    <ClInclude Include="Jugador.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

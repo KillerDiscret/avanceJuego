@@ -10,6 +10,7 @@ public:
 	void cambiar_imagen(char*nuevo);
 	void mostrar(Graphics^gr);
 	void Mover(Graphics^gr);
+	Rectangle get_rectangle();
 };
 CirculoG::CirculoG():padre()
 {
@@ -50,6 +51,10 @@ void CirculoG::mostrar(Graphics^gr)
 	System::Drawing::Rectangle zoom = System::Drawing::Rectangle(x, y, W/4, H/4);
 	gr->DrawImage(bmp, zoom, porcion, System::Drawing::GraphicsUnit::Pixel);
 	delete bmp;
+}
+Rectangle CirculoG::get_rectangle()
+{
+	return Rectangle(x+10,y+10,(W/4)-16,(H/4)-12);
 }
 void CirculoG::Mover(Graphics^gr)
 {
