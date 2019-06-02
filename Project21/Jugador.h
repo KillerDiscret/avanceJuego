@@ -11,11 +11,14 @@ private:
 	char*imagen;//nombre del archivo
 	int ancho, alto;
 	int indicex, indicey;
+	int vidas;
 	Direcciones direccion;
 	Direcciones ultima;
 public:
 	Jugador(void);
 	~Jugador(void);
+	int get_vidas();
+	void set_vidas(int nuevo);
 	void set_x(int nuevo);
 	void set_y(int nuevo);
 	int get_x();
@@ -37,10 +40,20 @@ Jugador::Jugador(void)
 	dx = 12;
 	dy = 12;
 	indicex = indicey = 0;
+	vidas = 5;
 	
 	imagen = new char[50];
 	direccion = ninguna;//esta variable obtiene la tecla que presiono
 	ultima = arriba;//esta variable muestra la imagen de la ultima tecla que presioné
+}
+
+int  Jugador::get_vidas()
+{
+	return vidas;
+}
+void Jugador::set_vidas(int nuevo)
+{
+	vidas = nuevo;
 }
 void Jugador::set_x(int nuevo)
 {
